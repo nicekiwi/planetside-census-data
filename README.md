@@ -2,4 +2,7 @@
 
 Common data used in Planetside 2 apps.
 
-Source: https://census.daybreakgames.com/
+#### Sources:
+
+- https://census.daybreakgames.com
+- https://planetside.fandom.com
