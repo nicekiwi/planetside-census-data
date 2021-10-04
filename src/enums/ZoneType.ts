@@ -4,4 +4,5 @@ export enum ZONE {
   AMERISH = 6,
   ESAMIR = 8,
   KOLTYR = 99,
+  DESOLATION = 199,
 }
