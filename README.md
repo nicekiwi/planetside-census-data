@@ -9,6 +9,17 @@ Common data used in my Planetside 2 apps.
 
 ### Changelog
 
+#### 1.3.0 - 11/10/2021
+
+- Add `CensusStreamEventType` and `MetagameEventStateType` enums.
+- Fix wrong param required for `urlComplete` function.
+- Rename `PLATFORM_API` enum to `PLATFORM_ENVIROMENT`.
+
+#### 1.2.0 - 10/10/2021
+
+- Try out new type publishing options
+- Include `WorldStateType` enum
+
 #### 1.1.0 - 4/10/2021
 
 - Refactored interfaces.
@@ -16,8 +27,3 @@ Common data used in my Planetside 2 apps.
 - Added Events data.
 - Returned Briggs (as its still returned from the API).
 - Added Apex world.
-
-#### 1.2.0 - 10/10/2021
-
-- Try out new type publishing options
-- Include `WorldStateType` enum

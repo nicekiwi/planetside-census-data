@@ -1,0 +1,7 @@
+export declare enum METAGAME_EVENT_STATE {
+    STARTED = 135,
+    RESTARTED = 136,
+    CANCELED = 137,
+    ENDED = 138,
+    XP_BONUX_CHANGED = 139
+}

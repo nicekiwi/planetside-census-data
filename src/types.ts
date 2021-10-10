@@ -1,4 +1,4 @@
-import { PLATFORM, PLATFORM_API } from "./enums/PlatformType";
+import { PLATFORM, PLATFORM_ENVIRONMENT } from "./enums/PlatformType";
 import { WORLD } from "./enums/WorldType";
 import { ZONE } from "./enums/ZoneType";
 
@@ -28,13 +28,13 @@ export interface IFactionsData {
 
 export interface IStreamData {
   url: string;
-  urlComplete: (worldId: number, serviceId: string) => string;
+  urlComplete: (environment: PLATFORM_ENVIRONMENT, serviceId: string) => string;
 }
 
 export interface IWorldsData {
   [key: number]: {
     name: string;
-    api: PLATFORM_API;
+    api: PLATFORM_ENVIRONMENT;
     platform: PLATFORM;
     region: string;
     location: string;
