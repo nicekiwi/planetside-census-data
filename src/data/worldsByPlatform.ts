@@ -1,9 +1,6 @@
 import { PLATFORM } from "../enums/PlatformType";
 import { WORLD } from "../enums/WorldType";
-
-export interface IWorldsByPlatformData {
-  [key: string]: WORLD[];
-}
+import { IWorldsByPlatformData } from "../types";
 
 export default <IWorldsByPlatformData>{
   [PLATFORM.PC]: [

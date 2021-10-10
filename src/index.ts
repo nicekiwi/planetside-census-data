@@ -1,24 +1,14 @@
-import api, { IApiData } from "./data/api";
-import stream, { IStreamData } from "./data/stream";
-import factions, { IFactionsData } from "./data/factions";
-import zones, { IZonesData } from "./data/zones";
-import worlds, { IWorldsData } from "./data/worlds";
-import events, { IEventsData } from "./data/events";
-import worldsByPlatform, {
-  IWorldsByPlatformData,
-} from "./data/worldsByPlatform";
+import * as Types from "./types";
 
-export interface IData {
-  api: IApiData;
-  stream: IStreamData;
-  worldsByPlatform: IWorldsByPlatformData;
-  worlds: IWorldsData;
-  events: IEventsData;
-  zones: IZonesData;
-  factions: IFactionsData;
-}
+import api from "./data/api";
+import stream from "./data/stream";
+import factions from "./data/factions";
+import zones from "./data/zones";
+import worlds from "./data/worlds";
+import events from "./data/events";
+import worldsByPlatform from "./data/worldsByPlatform";
 
-export default <IData>{
+export default <Types.IData>{
   api,
   stream,
   worldsByPlatform,
@@ -27,3 +17,5 @@ export default <IData>{
   zones,
   factions,
 };
+
+export { Types };

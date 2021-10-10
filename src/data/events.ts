@@ -1,13 +1,5 @@
 import { ZONE } from "../enums/ZoneType";
-
-export interface IEventsData {
-  [key: number]: {
-    name: string;
-    description: string;
-    type: number;
-    zoneId?: ZONE;
-  };
-}
+import { IEventsData } from "../types";
 
 export default <IEventsData>{
   1: {

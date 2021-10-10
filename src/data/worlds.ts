@@ -1,16 +1,6 @@
 import { PLATFORM, PLATFORM_API } from "../enums/PlatformType";
 import { WORLD } from "../enums/WorldType";
-
-export interface IWorldsData {
-  [key: number]: {
-    name: string;
-    api: PLATFORM_API;
-    platform: PLATFORM;
-    region: string;
-    location: string;
-    special?: boolean;
-  };
-}
+import { IWorldsData } from "../types";
 
 export default <IWorldsData>{
   [WORLD.CONNERY]: {

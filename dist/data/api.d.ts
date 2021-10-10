@@ -1,7 +1,3 @@
-export interface IApiData {
-    url: string;
-    urlHttps: string;
-    version: string;
-}
+import { IApiData } from "../types";
 declare const _default: IApiData;
 export default _default;

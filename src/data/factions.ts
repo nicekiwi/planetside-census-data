@@ -1,13 +1,5 @@
 import { FACTION } from "../enums/FactionType";
-
-export interface IFactionsData {
-  [key: number]: {
-    name: string;
-    short: string;
-    description: string;
-    color: string;
-  };
-}
+import { IFactionsData } from "../types";
 
 export default <IFactionsData>{
   [FACTION.VS]: {

@@ -1,7 +1,4 @@
-export interface IStreamData {
-  url: string;
-  urlComplete: (worldId: number, serviceId: string) => string;
-}
+import { IStreamData } from "../types";
 
 export default <IStreamData>{
   url: "push.planetside2.com/streaming",

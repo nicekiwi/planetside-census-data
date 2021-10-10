@@ -1,8 +1,9 @@
 {
   "name": "planetside-census-data",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Common data for planetside apps.",
-  "main": "dist/index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nicekiwi/planetside-census-data.git"

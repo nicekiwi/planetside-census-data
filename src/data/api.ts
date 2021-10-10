@@ -1,8 +1,4 @@
-export interface IApiData {
-  url: string;
-  urlHttps: string;
-  version: string;
-}
+import { IApiData } from "../types";
 
 export default <IApiData>{
   url: "census.daybreakgames.com",

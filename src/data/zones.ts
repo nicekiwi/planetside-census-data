@@ -1,12 +1,5 @@
 import { ZONE } from "../enums/ZoneType";
-
-export interface IZonesData {
-  [key: number]: {
-    name: string;
-    description: string;
-    keyword: string;
-  };
-}
+import { IZonesData } from "../types";
 
 export default <IZonesData>{
   [ZONE.INDAR]: {

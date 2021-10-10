@@ -1,9 +1,3 @@
-export interface IZonesData {
-    [key: number]: {
-        name: string;
-        description: string;
-        keyword: string;
-    };
-}
+import { IZonesData } from "../types";
 declare const _default: IZonesData;
 export default _default;
