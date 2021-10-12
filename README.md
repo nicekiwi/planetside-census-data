@@ -9,7 +9,12 @@ Common data used in my Planetside 2 apps.
 
 ### Changelog
 
-#### 1.4.0 - 11/10/2021
+#### 1.4.1 - 12/10/2021
+
+- Add `urlComplete` frunction to `api.js`.
+- Add `urlWss` as a variable and as a param to `urlComplete` in `stream.js`.
+
+#### 1.4.0 - 12/10/2021
 
 - Yet another large refactor of names, types and variables.
 
