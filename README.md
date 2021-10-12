@@ -9,6 +9,10 @@ Common data used in my Planetside 2 apps.
 
 ### Changelog
 
+#### 1.4.2 - 13/10/2021
+
+- Fix type definition for `api.urlComplete` to return `string` instead of `void`.
+
 #### 1.4.1 - 12/10/2021
 
 - Add `urlComplete` frunction to `api.js`.
