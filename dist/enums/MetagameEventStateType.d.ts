@@ -1,4 +1,4 @@
-export declare enum METAGAME_EVENT_STATE {
+export declare enum MetagameEventStateType {
     STARTED = 135,
     RESTARTED = 136,
     CANCELED = 137,

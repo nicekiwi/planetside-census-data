@@ -1,16 +1,22 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.WORLD = void 0;
-var WORLD;
-(function (WORLD) {
-    WORLD[WORLD["CONNERY"] = 1] = "CONNERY";
-    WORLD[WORLD["MILLER"] = 10] = "MILLER";
-    WORLD[WORLD["COBALT"] = 13] = "COBALT";
-    WORLD[WORLD["EMERALD"] = 17] = "EMERALD";
-    WORLD[WORLD["JAEGER"] = 19] = "JAEGER";
-    WORLD[WORLD["APEX"] = 24] = "APEX";
-    WORLD[WORLD["BRIGGS"] = 25] = "BRIGGS";
-    WORLD[WORLD["SOLTECH"] = 40] = "SOLTECH";
-    WORLD[WORLD["GENUDINE"] = 1000] = "GENUDINE";
-    WORLD[WORLD["CERES"] = 2000] = "CERES";
-})(WORLD = exports.WORLD || (exports.WORLD = {}));
+exports.WorldStateType = exports.WorldType = void 0;
+var WorldType;
+(function (WorldType) {
+    WorldType[WorldType["CONNERY"] = 1] = "CONNERY";
+    WorldType[WorldType["MILLER"] = 10] = "MILLER";
+    WorldType[WorldType["COBALT"] = 13] = "COBALT";
+    WorldType[WorldType["EMERALD"] = 17] = "EMERALD";
+    WorldType[WorldType["JAEGER"] = 19] = "JAEGER";
+    WorldType[WorldType["APEX"] = 24] = "APEX";
+    WorldType[WorldType["BRIGGS"] = 25] = "BRIGGS";
+    WorldType[WorldType["SOLTECH"] = 40] = "SOLTECH";
+    WorldType[WorldType["GENUDINE"] = 1000] = "GENUDINE";
+    WorldType[WorldType["CERES"] = 2000] = "CERES";
+})(WorldType = exports.WorldType || (exports.WorldType = {}));
+var WorldStateType;
+(function (WorldStateType) {
+    WorldStateType["ONLINE"] = "online";
+    WorldStateType["OFFLINE"] = "offline";
+    WorldStateType["LOCKED"] = "locked";
+})(WorldStateType = exports.WorldStateType || (exports.WorldStateType = {}));

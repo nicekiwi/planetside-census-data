@@ -1,12 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ZONE = void 0;
-var ZONE;
-(function (ZONE) {
-    ZONE[ZONE["INDAR"] = 2] = "INDAR";
-    ZONE[ZONE["HOSSIN"] = 4] = "HOSSIN";
-    ZONE[ZONE["AMERISH"] = 6] = "AMERISH";
-    ZONE[ZONE["ESAMIR"] = 8] = "ESAMIR";
-    ZONE[ZONE["KOLTYR"] = 99] = "KOLTYR";
-    ZONE[ZONE["DESOLATION"] = 199] = "DESOLATION";
-})(ZONE = exports.ZONE || (exports.ZONE = {}));
+exports.ZoneType = void 0;
+var ZoneType;
+(function (ZoneType) {
+    ZoneType[ZoneType["INDAR"] = 2] = "INDAR";
+    ZoneType[ZoneType["HOSSIN"] = 4] = "HOSSIN";
+    ZoneType[ZoneType["AMERISH"] = 6] = "AMERISH";
+    ZoneType[ZoneType["ESAMIR"] = 8] = "ESAMIR";
+    ZoneType[ZoneType["KOLTYR"] = 99] = "KOLTYR";
+    ZoneType[ZoneType["DESOLATION"] = 199] = "DESOLATION";
+})(ZoneType = exports.ZoneType || (exports.ZoneType = {}));

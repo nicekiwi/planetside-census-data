@@ -1,4 +1,4 @@
-export enum ZONE {
+export enum ZoneType {
   INDAR = 2,
   HOSSIN = 4,
   AMERISH = 6,

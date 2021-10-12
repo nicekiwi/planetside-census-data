@@ -3,76 +3,86 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const PlatformType_1 = require("../enums/PlatformType");
 const WorldType_1 = require("../enums/WorldType");
 exports.default = {
-    [WorldType_1.WORLD.CONNERY]: {
+    [WorldType_1.WorldType.CONNERY]: {
         name: "Connery",
-        api: PlatformType_1.PLATFORM_ENVIRONMENT.PC,
-        platform: PlatformType_1.PLATFORM.PC,
+        platform: PlatformType_1.PlatformType.PC,
+        namespace: `${PlatformType_1.NamespaceType.PC}:${PlatformType_1.NamespaceVersionType.V2}`,
+        enviroment: `${PlatformType_1.NamespaceType.PC}`,
         region: "us",
         location: "USA/Nevada",
     },
-    [WorldType_1.WORLD.MILLER]: {
+    [WorldType_1.WorldType.MILLER]: {
         name: "Miller",
-        api: PlatformType_1.PLATFORM_ENVIRONMENT.PC,
-        platform: PlatformType_1.PLATFORM.PC,
+        platform: PlatformType_1.PlatformType.PC,
+        namespace: `${PlatformType_1.NamespaceType.PC}:${PlatformType_1.NamespaceVersionType.V2}`,
+        enviroment: `${PlatformType_1.NamespaceType.PC}`,
         region: "eu",
         location: "Europe/Netherlands",
     },
-    [WorldType_1.WORLD.COBALT]: {
+    [WorldType_1.WorldType.COBALT]: {
         name: "Cobalt",
-        api: PlatformType_1.PLATFORM_ENVIRONMENT.PC,
-        platform: PlatformType_1.PLATFORM.PC,
+        platform: PlatformType_1.PlatformType.PC,
+        namespace: `${PlatformType_1.NamespaceType.PC}:${PlatformType_1.NamespaceVersionType.V2}`,
+        enviroment: `${PlatformType_1.NamespaceType.PC}`,
         region: "eu",
         location: "Europe/Netherlands",
     },
-    [WorldType_1.WORLD.EMERALD]: {
+    [WorldType_1.WorldType.EMERALD]: {
         name: "Emerald",
-        api: PlatformType_1.PLATFORM_ENVIRONMENT.PC,
-        platform: PlatformType_1.PLATFORM.PC,
+        platform: PlatformType_1.PlatformType.PC,
+        namespace: `${PlatformType_1.NamespaceType.PC}:${PlatformType_1.NamespaceVersionType.V2}`,
+        enviroment: `${PlatformType_1.NamespaceType.PC}`,
         region: "us",
         location: "USA/Maryland",
     },
-    [WorldType_1.WORLD.JAEGER]: {
+    [WorldType_1.WorldType.JAEGER]: {
         name: "Jaeger",
-        api: PlatformType_1.PLATFORM_ENVIRONMENT.PC,
-        platform: PlatformType_1.PLATFORM.PC,
+        platform: PlatformType_1.PlatformType.PC,
+        namespace: `${PlatformType_1.NamespaceType.PC}:${PlatformType_1.NamespaceVersionType.V2}`,
+        enviroment: `${PlatformType_1.NamespaceType.PC}`,
         region: "us",
         location: "USA/Maryland",
         special: true,
     },
-    [WorldType_1.WORLD.APEX]: {
+    [WorldType_1.WorldType.APEX]: {
         name: "Jaeger",
-        api: PlatformType_1.PLATFORM_ENVIRONMENT.PC,
-        platform: PlatformType_1.PLATFORM.PC,
+        platform: PlatformType_1.PlatformType.PC,
+        namespace: `${PlatformType_1.NamespaceType.PC}:${PlatformType_1.NamespaceVersionType.V2}`,
+        enviroment: `${PlatformType_1.NamespaceType.PC}`,
         region: "us",
         location: "USA/Maryland",
         special: true,
     },
-    [WorldType_1.WORLD.BRIGGS]: {
+    [WorldType_1.WorldType.BRIGGS]: {
         name: "Briggs",
-        api: PlatformType_1.PLATFORM_ENVIRONMENT.PC,
-        platform: PlatformType_1.PLATFORM.PC,
+        platform: PlatformType_1.PlatformType.PC,
+        namespace: `${PlatformType_1.NamespaceType.PC}:${PlatformType_1.NamespaceVersionType.V2}`,
+        enviroment: `${PlatformType_1.NamespaceType.PC}`,
         region: "au",
         location: "Australia",
         special: true,
     },
-    [WorldType_1.WORLD.SOLTECH]: {
+    [WorldType_1.WorldType.SOLTECH]: {
         name: "SolTech",
-        api: PlatformType_1.PLATFORM_ENVIRONMENT.PC,
-        platform: PlatformType_1.PLATFORM.PC,
+        platform: PlatformType_1.PlatformType.PC,
+        namespace: `${PlatformType_1.NamespaceType.PC}:${PlatformType_1.NamespaceVersionType.V2}`,
+        enviroment: `${PlatformType_1.NamespaceType.PC}`,
         region: "jp",
         location: "Japan/Tokyo",
     },
-    [WorldType_1.WORLD.GENUDINE]: {
+    [WorldType_1.WorldType.GENUDINE]: {
         name: "Genudine",
-        api: PlatformType_1.PLATFORM_ENVIRONMENT.PS4_US,
-        platform: PlatformType_1.PLATFORM.PS4,
+        platform: PlatformType_1.PlatformType.PS4,
+        namespace: `${PlatformType_1.NamespaceType.PS4_US}:${PlatformType_1.NamespaceVersionType.V2}`,
+        enviroment: `${PlatformType_1.NamespaceType.PS4_US}`,
         region: "us",
         location: "USA/California",
     },
-    [WorldType_1.WORLD.CERES]: {
+    [WorldType_1.WorldType.CERES]: {
         name: "Ceres",
-        api: PlatformType_1.PLATFORM_ENVIRONMENT.PS4_EU,
-        platform: PlatformType_1.PLATFORM.PS4,
+        platform: PlatformType_1.PlatformType.PS4,
+        namespace: `${PlatformType_1.NamespaceType.PS4_EU}:${PlatformType_1.NamespaceVersionType.V2}`,
+        enviroment: `${PlatformType_1.NamespaceType.PS4_EU}`,
         region: "eu",
         location: "Europe/Netherlands",
     },

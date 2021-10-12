@@ -1,4 +1,9 @@
-import { IStreamData } from "../types";
+import { NamespaceType } from "../enums/PlatformType";
+
+export interface IStreamData {
+  url: string;
+  urlComplete: (environment: NamespaceType, serviceId: string) => string;
+}
 
 export default <IStreamData>{
   url: "push.planetside2.com/streaming",

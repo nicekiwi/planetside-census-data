@@ -9,6 +9,10 @@ Common data used in my Planetside 2 apps.
 
 ### Changelog
 
+#### 1.4.0 - 11/10/2021
+
+- Yet another large refactor of names, types and variables.
+
 #### 1.3.0 - 11/10/2021
 
 - Add `CensusStreamEventType` and `MetagameEventStateType` enums.

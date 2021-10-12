@@ -1,78 +1,103 @@
-import { PLATFORM, PLATFORM_ENVIRONMENT } from "../enums/PlatformType";
-import { WORLD } from "../enums/WorldType";
-import { IWorldsData } from "../types";
+import {
+  PlatformType,
+  NamespaceType,
+  NamespaceVersionType,
+} from "../enums/PlatformType";
+import { WorldType } from "../enums/WorldType";
+
+export interface IWorldsData {
+  [key: number]: {
+    name: string;
+    platform: PlatformType;
+    namespace: string;
+    enviroment: NamespaceType;
+    region: string;
+    location: string;
+    special?: boolean;
+  };
+}
 
 export default <IWorldsData>{
-  [WORLD.CONNERY]: {
+  [WorldType.CONNERY]: {
     name: "Connery",
-    api: PLATFORM_ENVIRONMENT.PC,
-    platform: PLATFORM.PC,
+    platform: PlatformType.PC,
+    namespace: `${NamespaceType.PC}:${NamespaceVersionType.V2}`,
+    enviroment: `${NamespaceType.PC}`,
     region: "us",
     location: "USA/Nevada",
   },
-  [WORLD.MILLER]: {
+  [WorldType.MILLER]: {
     name: "Miller",
-    api: PLATFORM_ENVIRONMENT.PC,
-    platform: PLATFORM.PC,
+    platform: PlatformType.PC,
+    namespace: `${NamespaceType.PC}:${NamespaceVersionType.V2}`,
+    enviroment: `${NamespaceType.PC}`,
     region: "eu",
     location: "Europe/Netherlands",
   },
-  [WORLD.COBALT]: {
+  [WorldType.COBALT]: {
     name: "Cobalt",
-    api: PLATFORM_ENVIRONMENT.PC,
-    platform: PLATFORM.PC,
+    platform: PlatformType.PC,
+    namespace: `${NamespaceType.PC}:${NamespaceVersionType.V2}`,
+    enviroment: `${NamespaceType.PC}`,
     region: "eu",
     location: "Europe/Netherlands",
   },
-  [WORLD.EMERALD]: {
+  [WorldType.EMERALD]: {
     name: "Emerald",
-    api: PLATFORM_ENVIRONMENT.PC,
-    platform: PLATFORM.PC,
+    platform: PlatformType.PC,
+    namespace: `${NamespaceType.PC}:${NamespaceVersionType.V2}`,
+    enviroment: `${NamespaceType.PC}`,
     region: "us",
     location: "USA/Maryland",
   },
-  [WORLD.JAEGER]: {
+  [WorldType.JAEGER]: {
     name: "Jaeger",
-    api: PLATFORM_ENVIRONMENT.PC,
-    platform: PLATFORM.PC,
+    platform: PlatformType.PC,
+    namespace: `${NamespaceType.PC}:${NamespaceVersionType.V2}`,
+    enviroment: `${NamespaceType.PC}`,
     region: "us",
     location: "USA/Maryland",
     special: true,
   },
-  [WORLD.APEX]: {
+  [WorldType.APEX]: {
     name: "Jaeger",
-    api: PLATFORM_ENVIRONMENT.PC,
-    platform: PLATFORM.PC,
+    platform: PlatformType.PC,
+    namespace: `${NamespaceType.PC}:${NamespaceVersionType.V2}`,
+    enviroment: `${NamespaceType.PC}`,
     region: "us",
     location: "USA/Maryland",
     special: true,
   },
-  [WORLD.BRIGGS]: {
+  [WorldType.BRIGGS]: {
     name: "Briggs",
-    api: PLATFORM_ENVIRONMENT.PC,
-    platform: PLATFORM.PC,
+    platform: PlatformType.PC,
+    namespace: `${NamespaceType.PC}:${NamespaceVersionType.V2}`,
+    enviroment: `${NamespaceType.PC}`,
     region: "au",
     location: "Australia",
     special: true,
   },
-  [WORLD.SOLTECH]: {
+  [WorldType.SOLTECH]: {
     name: "SolTech",
-    api: PLATFORM_ENVIRONMENT.PC,
-    platform: PLATFORM.PC,
+    platform: PlatformType.PC,
+    namespace: `${NamespaceType.PC}:${NamespaceVersionType.V2}`,
+    enviroment: `${NamespaceType.PC}`,
     region: "jp",
     location: "Japan/Tokyo",
   },
-  [WORLD.GENUDINE]: {
+  [WorldType.GENUDINE]: {
     name: "Genudine",
-    api: PLATFORM_ENVIRONMENT.PS4_US,
-    platform: PLATFORM.PS4,
+    platform: PlatformType.PS4,
+    namespace: `${NamespaceType.PS4_US}:${NamespaceVersionType.V2}`,
+    enviroment: `${NamespaceType.PS4_US}`,
     region: "us",
     location: "USA/California",
   },
-  [WORLD.CERES]: {
+  [WorldType.CERES]: {
     name: "Ceres",
-    api: PLATFORM_ENVIRONMENT.PS4_EU,
-    platform: PLATFORM.PS4,
+    platform: PlatformType.PS4,
+    namespace: `${NamespaceType.PS4_EU}:${NamespaceVersionType.V2}`,
+    enviroment: `${NamespaceType.PS4_EU}`,
     region: "eu",
     location: "Europe/Netherlands",
   },

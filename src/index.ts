@@ -1,14 +1,46 @@
-import * as Types from "./types";
+import api, { IApiData } from "./data/api";
+import stream, { IStreamData } from "./data/stream";
+import factions, { IFactionsData } from "./data/factions";
+import zones, { IZonesData } from "./data/zones";
+import worlds, { IWorldsData } from "./data/worlds";
+import events, { IEventsData } from "./data/events";
+import worldsByPlatform, {
+  IWorldsByPlatformData,
+} from "./data/worldsByPlatform";
+import { FactionType } from "./enums/FactionType";
+import {
+  NamespaceType,
+  NamespaceVersionType,
+  PlatformType,
+} from "./enums/PlatformType";
+import { StreamEventType } from "./enums/StreamEventType";
+import { WorldStateType, WorldType } from "./enums/WorldType";
+import { ZoneType } from "./enums/ZoneType";
+import { MetagameEventStateType } from "./enums/MetagameEventStateType";
 
-import api from "./data/api";
-import stream from "./data/stream";
-import factions from "./data/factions";
-import zones from "./data/zones";
-import worlds from "./data/worlds";
-import events from "./data/events";
-import worldsByPlatform from "./data/worldsByPlatform";
+export interface IData {
+  api: IApiData;
+  stream: IStreamData;
+  worldsByPlatform: IWorldsByPlatformData;
+  worlds: IWorldsData;
+  events: IEventsData;
+  zones: IZonesData;
+  factions: IFactionsData;
+}
 
-export default <Types.IData>{
+export {
+  FactionType,
+  PlatformType,
+  WorldType,
+  ZoneType,
+  StreamEventType,
+  MetagameEventStateType,
+  WorldStateType,
+  NamespaceType,
+  NamespaceVersionType,
+};
+
+export default <IData>{
   api,
   stream,
   worldsByPlatform,
@@ -17,5 +49,3 @@ export default <Types.IData>{
   zones,
   factions,
 };
-
-export { Types };

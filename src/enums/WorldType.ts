@@ -1,4 +1,4 @@
-export enum WORLD {
+export enum WorldType {
   CONNERY = 1,
   MILLER = 10,
   COBALT = 13,
@@ -9,4 +9,10 @@ export enum WORLD {
   SOLTECH = 40,
   GENUDINE = 1000,
   CERES = 2000,
+}
+
+export enum WorldStateType {
+  ONLINE = "online",
+  OFFLINE = "offline",
+  LOCKED = "locked",
 }

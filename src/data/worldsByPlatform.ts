@@ -1,17 +1,19 @@
-import { PLATFORM } from "../enums/PlatformType";
-import { WORLD } from "../enums/WorldType";
-import { IWorldsByPlatformData } from "../types";
+import { PlatformType } from "../enums/PlatformType";
+import { WorldType } from "../enums/WorldType";
+export interface IWorldsByPlatformData {
+  [key: string]: WorldType[];
+}
 
 export default <IWorldsByPlatformData>{
-  [PLATFORM.PC]: [
-    WORLD.CONNERY,
-    WORLD.MILLER,
-    WORLD.COBALT,
-    WORLD.JAEGER,
-    WORLD.APEX,
-    WORLD.BRIGGS,
-    WORLD.EMERALD,
-    WORLD.SOLTECH,
+  [PlatformType.PC]: [
+    WorldType.CONNERY,
+    WorldType.MILLER,
+    WorldType.COBALT,
+    WorldType.JAEGER,
+    WorldType.APEX,
+    WorldType.BRIGGS,
+    WorldType.EMERALD,
+    WorldType.SOLTECH,
   ],
-  [PLATFORM.PS4]: [WORLD.GENUDINE, WORLD.CERES],
+  [PlatformType.PS4]: [WorldType.GENUDINE, WorldType.CERES],
 };

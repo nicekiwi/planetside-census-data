@@ -1,4 +1,4 @@
-export enum CENSUS_STREAM_EVENT {
+export enum StreamEventType {
   CHARACTER_ACHIEVEMENT_EARNED = "AchievementEarned",
   CHARACTER_DEATH = "Death",
   CHARACTER_LOGIN = "PlayerLogin",
