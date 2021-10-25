@@ -1,6 +1,6 @@
 {
   "name": "planetside-census-data",
-  "version": "1.4.2",
+  "version": "1.5.0",
   "description": "Common data for planetside apps.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

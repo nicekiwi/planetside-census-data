@@ -482,4 +482,10 @@ exports.default = {
         type: 9,
         zoneId: ZoneType_1.ZoneType.KOLTYR,
     },
+    215: {
+        name: "Conquest",
+        description: "Capture bases and kill enemies to earn points.",
+        type: 6,
+        zoneId: ZoneType_1.ZoneType.KOLTYR,
+    },
 };

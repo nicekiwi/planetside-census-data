@@ -492,4 +492,10 @@ export default <IEventsData>{
     type: 9,
     zoneId: ZoneType.KOLTYR,
   },
+  215: {
+    name: "Conquest",
+    description: "Capture bases and kill enemies to earn points.",
+    type: 6,
+    zoneId: ZoneType.KOLTYR,
+  },
 };

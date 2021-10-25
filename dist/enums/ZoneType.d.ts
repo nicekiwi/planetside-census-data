@@ -3,6 +3,9 @@ export declare enum ZoneType {
     HOSSIN = 4,
     AMERISH = 6,
     ESAMIR = 8,
-    KOLTYR = 99,
-    DESOLATION = 199
+    VR_NC = 96,
+    VR_TR = 97,
+    VR_VS = 98,
+    KOLTYR = 10000,
+    DESOLATION = 20000
 }

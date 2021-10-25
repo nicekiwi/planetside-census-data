@@ -3,6 +3,7 @@ export interface IZonesData {
         name: string;
         description: string;
         keyword: string;
+        warpgateRegions: number[];
     };
 }
 declare const _default: IZonesData;

@@ -9,6 +9,12 @@ Common data used in my Planetside 2 apps.
 
 ### Changelog
 
+#### 1.5.0 - 25/10/2021
+
+- Add VR Training rooms and warpgate region IDs to Zone data.
+- Add possible new Koltyr event data from patch notes: https://forums.daybreakgames.com/ps2/index.php?threads/oct-20-2021-pc-hotfix.257622/.
+- **Breaking** bump Koltyr and Desolation fake zone IDs.
+
 #### 1.4.2 - 13/10/2021
 
 - Fix type definition for `api.urlComplete` to return `string` instead of `void`.
