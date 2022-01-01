@@ -60,7 +60,7 @@ export default <IWorldsData>{
     special: true,
   },
   [WorldType.APEX]: {
-    name: "Jaeger",
+    name: "Apex",
     platform: PlatformType.PC,
     namespace: `${NamespaceType.PC}:${NamespaceVersionType.V2}`,
     enviroment: `${NamespaceType.PC}`,
