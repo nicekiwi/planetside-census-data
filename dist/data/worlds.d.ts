@@ -4,7 +4,7 @@ export interface IWorldsData {
         name: string;
         platform: PlatformType;
         namespace: string;
-        enviroment: NamespaceType;
+        environment: NamespaceType;
         region: string;
         location: string;
         special?: boolean;

@@ -38,6 +38,13 @@ export default <IZonesData>{
     keyword: "icy",
     warpgateRegions: [18029, 18030, 18062],
   },
+  [ZoneType.OSHUR]: {
+    name: "Oshur",
+    description:
+      "A tropical paradise brimming with research opportunities... evacuated as the Auraxian War began.",
+    keyword: "island",
+    warpgateRegions: [],
+  },
   [ZoneType.VR_NC]: {
     name: "VR Training Room (NC)",
     description:

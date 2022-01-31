@@ -26,6 +26,12 @@ exports.default = {
         keyword: "icy",
         warpgateRegions: [18029, 18030, 18062],
     },
+    [ZoneType_1.ZoneType.OSHUR]: {
+        name: "Oshur",
+        description: "A tropical paradise brimming with research opportunities... evacuated as the Auraxian War began.",
+        keyword: "island",
+        warpgateRegions: [],
+    },
     [ZoneType_1.ZoneType.VR_NC]: {
         name: "VR Training Room (NC)",
         description: "Experiment with all weapons, vehicles and attachments in your empire's own VR Training simulator.",

@@ -7,6 +7,7 @@ var ZoneType;
     ZoneType[ZoneType["HOSSIN"] = 4] = "HOSSIN";
     ZoneType[ZoneType["AMERISH"] = 6] = "AMERISH";
     ZoneType[ZoneType["ESAMIR"] = 8] = "ESAMIR";
+    ZoneType[ZoneType["OSHUR"] = 344] = "OSHUR";
     ZoneType[ZoneType["VR_NC"] = 96] = "VR_NC";
     ZoneType[ZoneType["VR_TR"] = 97] = "VR_TR";
     ZoneType[ZoneType["VR_VS"] = 98] = "VR_VS";

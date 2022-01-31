@@ -9,6 +9,12 @@ Common data used in my Planetside 2 apps.
 
 ### Changelog
 
+#### 1.5.1 - 31/01/2022
+
+- Add Oshur zone data (Thanks Mono).
+- **Breaking** Fix `environment` typo on World data.
+- Fix wrong name on Apex server.
+
 #### 1.5.0 - 25/10/2021
 
 - Add VR Training rooms and warpgate region IDs to Zone data.
