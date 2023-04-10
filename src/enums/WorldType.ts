@@ -12,7 +12,7 @@ export enum WorldType {
 }
 
 export enum WorldStateType {
-  ONLINE = "online",
-  OFFLINE = "offline",
-  LOCKED = "locked",
+  ONLINE = 'online',
+  OFFLINE = 'offline',
+  LOCKED = 'locked',
 }
