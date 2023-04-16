@@ -49,6 +49,6 @@
     "ws": "^8.13.0"
   },
   "lint-staged": {
-    "src/**/*.ts": "prettier --write --ignore-unknown"
+    "src/**/*.ts": "eslint 'src/**/*.ts'"
   }
 }

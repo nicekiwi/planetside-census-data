@@ -6,7 +6,7 @@ import axios, {
 import get from 'lodash.get'
 import has from 'lodash.has'
 
-import { type NamespaceType } from './enums/NamespaceType'
+import { NamespaceVersionType, NamespaceType } from './enums/NamespaceType'
 
 export const requestUrl = 'census.daybreakgames.com'
 
@@ -16,14 +16,14 @@ export function requestUrlComplete(
   namespace: NamespaceType,
   serviceId: string
 ): string {
-  return `${requestUrlHttps}/s:${serviceId}/get/${namespace}/`
+  return `${requestUrlHttps}/s:${serviceId}/get/${namespace}:${NamespaceVersionType.V2}/`
 }
 
 export interface ICensusRequestConfig
   extends Omit<AxiosRequestConfig, 'method' | 'url'> {
   uri: string;
   collection?: string;
-}
+} 
 
 export type ICensusRequestError<T = unknown> = AxiosError<T>
 

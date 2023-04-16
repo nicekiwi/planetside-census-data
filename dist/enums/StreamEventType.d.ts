@@ -110,6 +110,7 @@ export interface IDeathPayload extends IStreamPayload {
     attacker_loadout_id: string;
     attacker_vehicle_id: string;
     attacker_weapon_id: string;
+    attacker_team_id: string;
     character_id: string;
     character_loadout_id: string;
     is_critical: string;

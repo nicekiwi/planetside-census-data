@@ -148,6 +148,7 @@ stream.on(StreamEventType.CHARACTER_DEATH, (data: ServiceMessageResponse<DeathPa
 - **New** Add `CensusStream` client to connect to the Census stream.
 - **Breaking** Update minimum node version to `18.x`
 - Add types for `stream` and `request` clients.
+- Add new zone data
 
 #### 1.5.1 - 31/01/2022
 
@@ -178,7 +179,7 @@ stream.on(StreamEventType.CHARACTER_DEATH, (data: ServiceMessageResponse<DeathPa
 
 - Add `CensusStreamEventType` and `MetagameEventStateType` enums.
 - Fix wrong param required for `urlComplete` function.
-- Rename `PLATFORM_API` enum to `PLATFORM_ENVIROMENT`.
+- Rename `PLATFORM_API` enum to `PLATFORM_ENVIRONMENT`.
 
 #### 1.2.0 - 10/10/2021
 

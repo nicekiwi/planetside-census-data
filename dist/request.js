@@ -7,10 +7,11 @@ exports.CensusRequest = exports.requestUrlComplete = exports.requestUrlHttps = e
 const axios_1 = __importDefault(require("axios"));
 const lodash_get_1 = __importDefault(require("lodash.get"));
 const lodash_has_1 = __importDefault(require("lodash.has"));
+const NamespaceType_1 = require("./enums/NamespaceType");
 exports.requestUrl = 'census.daybreakgames.com';
 exports.requestUrlHttps = 'https://census.daybreakgames.com';
 function requestUrlComplete(namespace, serviceId) {
-    return `${exports.requestUrlHttps}/s:${serviceId}/get/${namespace}/`;
+    return `${exports.requestUrlHttps}/s:${serviceId}/get/${namespace}:${NamespaceType_1.NamespaceVersionType.V2}/`;
 }
 exports.requestUrlComplete = requestUrlComplete;
 class CensusRequest {
@@ -21,6 +22,7 @@ class CensusRequest {
     }
     async get({ uri, collection, ...config }) {
         this.response = await axios_1.default.get(`${this.url}/${uri}`, config);
+        console.log(this.response.data);
         if (collection === undefined) {
             return this.response.data;
         }

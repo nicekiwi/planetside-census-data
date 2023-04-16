@@ -59,7 +59,7 @@ exports.zones = {
         name: 'Oshur',
         description: 'Oshur\'s sandy archipelago and sparkling blue waters provide opportunities for engagement by land, sea, and air.',
         keyword: 'island',
-        warpgateRegions: [],
+        warpgateRegions: [18303, 18304, 18305],
     },
     [ZoneType_1.ZoneType.VR]: {
         name: 'VR Training Room (NC)',

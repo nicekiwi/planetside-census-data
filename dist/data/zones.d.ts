@@ -31,7 +31,7 @@ export declare const zones: {
         name: string;
         description: string;
         keyword: string;
-        warpgateRegions: never[];
+        warpgateRegions: number[];
     };
     95: {
         name: string;

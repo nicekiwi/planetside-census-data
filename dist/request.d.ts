@@ -1,5 +1,5 @@
 import { type AxiosError, type AxiosRequestConfig } from 'axios';
-import { type NamespaceType } from './enums/NamespaceType';
+import { NamespaceType } from './enums/NamespaceType';
 export declare const requestUrl = "census.daybreakgames.com";
 export declare const requestUrlHttps = "https://census.daybreakgames.com";
 export declare function requestUrlComplete(namespace: NamespaceType, serviceId: string): string;
