@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.StreamEventType = void 0;
+exports.ServiceType = exports.MessageType = exports.StreamEventType = void 0;
 var StreamEventType;
 (function (StreamEventType) {
     StreamEventType["CHARACTER_ACHIEVEMENT_EARNED"] = "AchievementEarned";
@@ -19,3 +19,15 @@ var StreamEventType;
     StreamEventType["ZONE_METAGAME_EVENT"] = "MetagameEvent";
     StreamEventType["ZONE_FACILITY_CONTROL"] = "FacilityControl";
 })(StreamEventType = exports.StreamEventType || (exports.StreamEventType = {}));
+var MessageType;
+(function (MessageType) {
+    MessageType["HEARTBEAT"] = "heartbeat";
+    MessageType["SERVICE_MESSAGE"] = "serviceMessage";
+    MessageType["SERVICE_STATE_CHANGE"] = "serviceStateChange";
+    MessageType["CONNECTION_STATE_CHANGED"] = "connectionStateChanged";
+})(MessageType = exports.MessageType || (exports.MessageType = {}));
+var ServiceType;
+(function (ServiceType) {
+    ServiceType["EVENT"] = "event";
+    ServiceType["PUSH"] = "push";
+})(ServiceType = exports.ServiceType || (exports.ServiceType = {}));

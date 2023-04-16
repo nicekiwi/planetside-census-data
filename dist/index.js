@@ -1,37 +1,49 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.NamespaceVersionType = exports.NamespaceType = exports.WorldStateType = exports.MetagameEventStateType = exports.StreamEventType = exports.ZoneType = exports.WorldType = exports.PlatformType = exports.FactionType = void 0;
-const api_1 = __importDefault(require("./data/api"));
-const stream_1 = __importDefault(require("./data/stream"));
-const factions_1 = __importDefault(require("./data/factions"));
-const zones_1 = __importDefault(require("./data/zones"));
-const worlds_1 = __importDefault(require("./data/worlds"));
-const events_1 = __importDefault(require("./data/events"));
-const worldsByPlatform_1 = __importDefault(require("./data/worldsByPlatform"));
-const FactionType_1 = require("./enums/FactionType");
-Object.defineProperty(exports, "FactionType", { enumerable: true, get: function () { return FactionType_1.FactionType; } });
-const PlatformType_1 = require("./enums/PlatformType");
-Object.defineProperty(exports, "NamespaceType", { enumerable: true, get: function () { return PlatformType_1.NamespaceType; } });
-Object.defineProperty(exports, "NamespaceVersionType", { enumerable: true, get: function () { return PlatformType_1.NamespaceVersionType; } });
-Object.defineProperty(exports, "PlatformType", { enumerable: true, get: function () { return PlatformType_1.PlatformType; } });
-const StreamEventType_1 = require("./enums/StreamEventType");
-Object.defineProperty(exports, "StreamEventType", { enumerable: true, get: function () { return StreamEventType_1.StreamEventType; } });
-const WorldType_1 = require("./enums/WorldType");
-Object.defineProperty(exports, "WorldStateType", { enumerable: true, get: function () { return WorldType_1.WorldStateType; } });
+exports.streamUrlComplete = exports.streamUrlWss = exports.streamUrl = exports.CensusStream = exports.requestUrlComplete = exports.requestUrlHttps = exports.requestUrl = exports.CensusRequest = exports.outfitWarZoneIds = exports.liveZoneIds = exports.zoneIds = exports.zones = exports.worldsByPlatform = exports.worldsByNamespace = exports.worldIds = exports.worlds = exports.factionShortToId = exports.factionIdToShort = exports.factions = exports.events = exports.ZoneType = exports.ServiceType = exports.MessageType = exports.StreamEventType = exports.MetagameEventStateType = exports.FactionShortType = exports.FactionType = exports.namespaces = exports.NamespaceVersionType = exports.NamespaceType = exports.PlatformType = exports.WorldStateType = exports.WorldType = void 0;
+var WorldType_1 = require("./enums/WorldType");
 Object.defineProperty(exports, "WorldType", { enumerable: true, get: function () { return WorldType_1.WorldType; } });
-const ZoneType_1 = require("./enums/ZoneType");
-Object.defineProperty(exports, "ZoneType", { enumerable: true, get: function () { return ZoneType_1.ZoneType; } });
-const MetagameEventStateType_1 = require("./enums/MetagameEventStateType");
+Object.defineProperty(exports, "WorldStateType", { enumerable: true, get: function () { return WorldType_1.WorldStateType; } });
+var PlatformType_1 = require("./enums/PlatformType");
+Object.defineProperty(exports, "PlatformType", { enumerable: true, get: function () { return PlatformType_1.PlatformType; } });
+var NamespaceType_1 = require("./enums/NamespaceType");
+Object.defineProperty(exports, "NamespaceType", { enumerable: true, get: function () { return NamespaceType_1.NamespaceType; } });
+Object.defineProperty(exports, "NamespaceVersionType", { enumerable: true, get: function () { return NamespaceType_1.NamespaceVersionType; } });
+Object.defineProperty(exports, "namespaces", { enumerable: true, get: function () { return NamespaceType_1.namespaces; } });
+var FactionType_1 = require("./enums/FactionType");
+Object.defineProperty(exports, "FactionType", { enumerable: true, get: function () { return FactionType_1.FactionType; } });
+Object.defineProperty(exports, "FactionShortType", { enumerable: true, get: function () { return FactionType_1.FactionShortType; } });
+var MetagameEventStateType_1 = require("./enums/MetagameEventStateType");
 Object.defineProperty(exports, "MetagameEventStateType", { enumerable: true, get: function () { return MetagameEventStateType_1.MetagameEventStateType; } });
-exports.default = {
-    api: api_1.default,
-    stream: stream_1.default,
-    worldsByPlatform: worldsByPlatform_1.default,
-    worlds: worlds_1.default,
-    events: events_1.default,
-    zones: zones_1.default,
-    factions: factions_1.default,
-};
+var StreamEventType_1 = require("./enums/StreamEventType");
+Object.defineProperty(exports, "StreamEventType", { enumerable: true, get: function () { return StreamEventType_1.StreamEventType; } });
+Object.defineProperty(exports, "MessageType", { enumerable: true, get: function () { return StreamEventType_1.MessageType; } });
+Object.defineProperty(exports, "ServiceType", { enumerable: true, get: function () { return StreamEventType_1.ServiceType; } });
+var ZoneType_1 = require("./enums/ZoneType");
+Object.defineProperty(exports, "ZoneType", { enumerable: true, get: function () { return ZoneType_1.ZoneType; } });
+var events_1 = require("./data/events");
+Object.defineProperty(exports, "events", { enumerable: true, get: function () { return events_1.events; } });
+var factions_1 = require("./data/factions");
+Object.defineProperty(exports, "factions", { enumerable: true, get: function () { return factions_1.factions; } });
+Object.defineProperty(exports, "factionIdToShort", { enumerable: true, get: function () { return factions_1.factionIdToShort; } });
+Object.defineProperty(exports, "factionShortToId", { enumerable: true, get: function () { return factions_1.factionShortToId; } });
+var worlds_1 = require("./data/worlds");
+Object.defineProperty(exports, "worlds", { enumerable: true, get: function () { return worlds_1.worlds; } });
+Object.defineProperty(exports, "worldIds", { enumerable: true, get: function () { return worlds_1.worldIds; } });
+Object.defineProperty(exports, "worldsByNamespace", { enumerable: true, get: function () { return worlds_1.worldsByNamespace; } });
+Object.defineProperty(exports, "worldsByPlatform", { enumerable: true, get: function () { return worlds_1.worldsByPlatform; } });
+var zones_1 = require("./data/zones");
+Object.defineProperty(exports, "zones", { enumerable: true, get: function () { return zones_1.zones; } });
+Object.defineProperty(exports, "zoneIds", { enumerable: true, get: function () { return zones_1.zoneIds; } });
+Object.defineProperty(exports, "liveZoneIds", { enumerable: true, get: function () { return zones_1.liveZoneIds; } });
+Object.defineProperty(exports, "outfitWarZoneIds", { enumerable: true, get: function () { return zones_1.outfitWarZoneIds; } });
+var request_1 = require("./request");
+Object.defineProperty(exports, "CensusRequest", { enumerable: true, get: function () { return request_1.CensusRequest; } });
+Object.defineProperty(exports, "requestUrl", { enumerable: true, get: function () { return request_1.requestUrl; } });
+Object.defineProperty(exports, "requestUrlHttps", { enumerable: true, get: function () { return request_1.requestUrlHttps; } });
+Object.defineProperty(exports, "requestUrlComplete", { enumerable: true, get: function () { return request_1.requestUrlComplete; } });
+var stream_1 = require("./stream");
+Object.defineProperty(exports, "CensusStream", { enumerable: true, get: function () { return stream_1.CensusStream; } });
+Object.defineProperty(exports, "streamUrl", { enumerable: true, get: function () { return stream_1.streamUrl; } });
+Object.defineProperty(exports, "streamUrlWss", { enumerable: true, get: function () { return stream_1.streamUrlWss; } });
+Object.defineProperty(exports, "streamUrlComplete", { enumerable: true, get: function () { return stream_1.streamUrlComplete; } });

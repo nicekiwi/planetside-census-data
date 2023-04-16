@@ -4,11 +4,9 @@ export declare enum FactionType {
     TR = 3,
     NSO = 4
 }
-export interface IFactionsData {
-    [key: number]: {
-        name: string;
-        short: string;
-        description: string;
-        color: string;
-    };
+export declare enum FactionShortType {
+    VS = "vs",
+    NC = "nc",
+    TR = "tr",
+    NSO = "nso"
 }

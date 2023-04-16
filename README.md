@@ -2,12 +2,153 @@
 
 Common data used in my Planetside 2 apps.
 
-#### Sources:
+Powers the [ps2.nice.kiwi](https://ps2.nice.kiwi) population tracker.
+
+## Usage
+
+### Install
+
+```bash
+npm i planetside-census-data
+```
+
+### Examples
+
+#### CensusRequest with validation
+
+```ts
+import { censusRequest, NamespaceType } from 'planetside-census-data';
+
+interface ICharacterFaction {
+  character_id: string;
+  faction_id: number;
+}
+
+const characters = await censusRequest<ICharacterFaction[]>({
+  serviceId: 's:example',
+  platform: NamespaceType.PC,
+  uri: 'character',
+  params: {
+    'character_id': '54200000000000000,54200000000000001',
+    'c:show': 'character_id,faction_id',
+  },
+  collection: 'character_list',
+});
+
+console.log(characters);
+
+// [
+//   {
+//     character_id: '54200000000000000',
+//     faction_id: 1,
+//   },
+//   {
+//     character_id: '54200000000000001',
+//     faction_id: 2,
+//   }
+// ]
+```
+
+#### CensusRequest without list validation
+
+```ts
+import { censusRequest, NamespaceType } from 'planetside-census-data';
+
+interface ICharacterFaction {
+  character_id: string;
+  faction_id: number;
+}
+
+const characters = await censusRequest<{ character_list: ICharacterFaction[], returned: number }>({
+  serviceId: 's:example',
+  platform: NamespaceType.PC,
+  uri: 'character',
+  params: {
+    'character_id': '54200000000000000,54200000000000001',
+    'c:show': 'character_id,faction_id',
+  }
+});
+
+console.log(characters);
+
+// {
+//    character_list: [
+//      {
+//        character_id: '54200000000000000',
+//        faction_id: 1,
+//      },
+//      {
+//        character_id: '54200000000000001',
+//        faction_id: 2,
+//      }
+//    ],
+//    returned: 2
+// }
+```
+
+#### CensusStream
+
+```ts
+import { CensusStream, NamespaceType, StreamEventType } from 'planetside-census-data';
+
+const stream = new CensusStream(
+  platform: NamespaceType.PC,
+  serviceId: 's:example'
+);
+
+stream.on('open', () => {
+  console.log('Connected to Census stream');
+
+  stream.subscribe(
+    worlds: [WorldType.CONNERY],
+    eventNames: [StreamEventType.CHARACTER_DEATH]
+  );
+
+  console.log('Subscribed to character Death events on Connery');
+});
+
+stream.on(StreamEventType.CHARACTER_DEATH, (data: ServiceMessageResponse<DeathPayload>) => {
+  console.log(data);
+});
+
+// Connected to Census stream
+// Subscribed to character Death events on Connery
+// {
+//   "payload":{
+//     "attacker_character_id":"5429026007696236657","attacker_fire_mode_id":"24103",
+//     "attacker_loadout_id":"1",
+//     "attacker_team_id":"2",
+//     "attacker_vehicle_id":"0",
+//     "attacker_weapon_id":"24003","character_id":"5429152843598287233","character_loadout_id":"32",
+//     "event_name":"Death",
+//     "is_critical":"0",
+//     "is_headshot":"0",
+//     "team_id":"1",
+//     "timestamp":"1681105322",
+//     "world_id":"1",
+//     "zone_id":"8"
+//   },
+//   "service":"event",
+//   "type":"serviceMessage"
+// }
+
+```
+
+### Sources:
 
 - https://census.daybreakgames.com
 - https://planetside.fandom.com
+- `CensusStream` base class blatantly stolen from [planetside-stream-api](https://github.com/Planetside-Community-Devs/planetside-stream-api)
 
 ### Changelog
+
+#### 2.0.0 - 10/04/2023
+
+- **New** Add `CensusRequest` client to query the Census API.
+- **New** Add `CensusStream` client to connect to the Census stream.
+- **Breaking** Update minimum node version to `18.x`
+- Add types for `stream` and `request` clients.
+- Add new zone data
 
 #### 1.5.1 - 31/01/2022
 
@@ -38,7 +179,7 @@ Common data used in my Planetside 2 apps.
 
 - Add `CensusStreamEventType` and `MetagameEventStateType` enums.
 - Fix wrong param required for `urlComplete` function.
-- Rename `PLATFORM_API` enum to `PLATFORM_ENVIROMENT`.
+- Rename `PLATFORM_API` enum to `PLATFORM_ENVIRONMENT`.
 
 #### 1.2.0 - 10/10/2021
 

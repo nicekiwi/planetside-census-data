@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.FactionType = void 0;
+exports.FactionShortType = exports.FactionType = void 0;
 var FactionType;
 (function (FactionType) {
     FactionType[FactionType["VS"] = 1] = "VS";
@@ -8,3 +8,10 @@ var FactionType;
     FactionType[FactionType["TR"] = 3] = "TR";
     FactionType[FactionType["NSO"] = 4] = "NSO";
 })(FactionType = exports.FactionType || (exports.FactionType = {}));
+var FactionShortType;
+(function (FactionShortType) {
+    FactionShortType["VS"] = "vs";
+    FactionShortType["NC"] = "nc";
+    FactionShortType["TR"] = "tr";
+    FactionShortType["NSO"] = "nso";
+})(FactionShortType = exports.FactionShortType || (exports.FactionShortType = {}));
