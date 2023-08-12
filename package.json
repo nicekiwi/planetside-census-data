@@ -60,7 +60,8 @@
   },
   "lint-staged": {
     "./src/**/*.ts": [
-      "npx prettier --check ./src/**/*.ts"
+      "npx prettier --check",
+      "npx eslint"
     ]
   }
 }
