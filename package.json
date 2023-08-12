@@ -1,6 +1,6 @@
 {
   "name": "planetside-census-data",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Common data for planetside apps.",
   "repository": {
     "type": "git",
@@ -16,27 +16,35 @@
     "url": "https://github.com/nicekiwi/planetside-census-data/issues"
   },
   "homepage": "https://github.com/nicekiwi/planetside-census-data#readme",
+  "types": "src/index.d.ts",
   "scripts": {
-    "clean": "rimraf ./dist",
-    "compile": "tsc",
-    "build": "npm run clean && npm run compile",
-    "lint": "eslint 'src/**/*.ts'",
-    "lint:fix": "eslint 'src/**/*.ts' --fix",
+    "build": "rimraf ./dist && tsc",
+    "lint": "npm run prettier && npm run eslint",
+    "lint:fix": "npm run prettier:fix && npm run eslint:fix",
+    "prettier": "npx prettier --check ./src/**/*.ts",
+    "prettier:fix": "npx prettier --log-level warn --write ./src/**/*.ts",
+    "eslint": "npx eslint --ignore-path .eslintignore ./src/**/*.ts",
+    "eslint:fix": "npx eslint --ignore-path .eslintignore ./src/**/*.ts --fix",
     "prepare": "husky install"
   },
   "devDependencies": {
+    "@tsconfig/node-lts": "^18.12.3",
     "@tsconfig/node18": "^18.2.0",
     "@types/lodash.get": "^4.4.7",
     "@types/lodash.has": "^4.5.7",
     "@types/node": "^18.15.11",
     "@types/ws": "^8.5.5",
     "@typescript-eslint/eslint-plugin": "^6.3.0",
+    "@typescript-eslint/parser": "^6.3.0",
     "eslint": "^8.47.0",
+    "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.28.0",
     "eslint-plugin-n": "^16.0.1",
+    "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-promise": "^6.1.1",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
+    "prettier": "^3.0.1",
     "rimraf": "^5.0.1",
     "typescript": "^5.1.6"
   },
@@ -46,7 +54,13 @@
     "lodash.has": "^4.5.2",
     "ws": "^8.13.0"
   },
+  "engines": {
+    "node": "18.16.0",
+    "npm": "9.5.1"
+  },
   "lint-staged": {
-    "src/**/*.ts": "eslint 'src/**/*.ts'"
+    "./src/**/*.ts": [
+      "npx prettier --check ./src/**/*.ts"
+    ]
   }
 }

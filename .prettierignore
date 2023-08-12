@@ -1,0 +1,9 @@
+dist
+
+.env
+.env.example
+
+.eslintrc.js
+ecosystem.config.js
+
+*.yml

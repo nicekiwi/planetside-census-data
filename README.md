@@ -17,8 +17,8 @@ npm i planetside-census-data
 #### CensusRequest with list validation
 
 ```ts
-import CensusRequest from 'planetside-census-data/request';
-import { NamespaceType } from 'planetside-census-data/enums/NamespaceType';
+import CensusRequest from 'planetside-census-data/dist/request';
+import { NamespaceType } from 'planetside-census-data';
 
 interface ICharacterFaction {
   character_id: string;
@@ -63,8 +63,8 @@ console.log(characters);
 #### CensusRequest without list validation
 
 ```ts
-import CensusRequest from 'planetside-census-data/request';
-import { NamespaceType } from 'planetside-census-data/enums/NamespaceType';
+import CensusRequest from 'planetside-census-data/dist/request';
+import { NamespaceType } from 'planetside-census-data';
 
 interface ICharacterFaction {
   character_id: string;
@@ -112,9 +112,8 @@ console.log(characters);
 #### CensusStream
 
 ```ts
-import CensusStream from 'planetside-census-data';
-import { NamespaceType } from 'planetside-census-data/enums/NamespaceType';
-import { StreamEventType } from 'planetside-census-data/enums/StreamEventType';
+import CensusStream from 'planetside-census-data/dist/stream';
+import { NamespaceType, StreamEventType } from 'planetside-census-data';
 
 const stream = new CensusStream(
   platform: NamespaceType.PC,
@@ -167,9 +166,13 @@ stream.on(StreamEventType.CHARACTER_DEATH, (data: ServiceMessageResponse<DeathPa
 
 ### Changelog
 
+#### 2.1.1 - 11/08/2023
+- Fix imports failing
+- Revert to import from base package again.
+
 #### 2.1.0 - 11/08/2023
 - Updated README with correct usage of `CensusRequest`.
-- **Breaking** Remove `index.ts`. Import directly form `data`, `enums`, `interfaces`, `request` or `stream` instead.
+- **Breaking** Remove `index.d.ts`. Import directly form `data`, `enums`, `interfaces`, `request` or `stream` instead.
 - **Breaking** Remove `data/events.ts`, it changes too often to keep static.
 - Move `stream` interfaces into own file.
 - Move `namespaces` into own file.

@@ -27,17 +27,12 @@ export const liveZoneIds = [
   ZoneType.OSHUR,
 ]
 
-export const outfitWarZoneIds = [
-  ZoneType.NEXUS,
-  ZoneType.DESOLATION,
-  ZoneType.DESOLATION_2,
-]
+export const outfitWarZoneIds = [ZoneType.NEXUS, ZoneType.DESOLATION, ZoneType.DESOLATION_2]
 
 export const zones = {
   [ZoneType.INDAR]: {
     name: 'Indar',
-    description:
-      'Large desert continent, located in the region a sea once occupied.',
+    description: 'Large desert continent, located in the region a sea once occupied.',
     keyword: 'desert',
     warpgateRegions: [2201, 2202, 2203],
   },
@@ -65,35 +60,35 @@ export const zones = {
   [ZoneType.OSHUR]: {
     name: 'Oshur',
     description:
-      'Oshur\'s sandy archipelago and sparkling blue waters provide opportunities for engagement by land, sea, and air.',
+      "Oshur's sandy archipelago and sparkling blue waters provide opportunities for engagement by land, sea, and air.",
     keyword: 'island',
-    warpgateRegions: [18303,18304,18305],
+    warpgateRegions: [18303, 18304, 18305],
   },
   [ZoneType.VR]: {
     name: 'VR Training Room (NC)',
     description:
-      'Experiment with all weapons, vehicles and attachments in your empire\'s own VR Training simulator.',
+      "Experiment with all weapons, vehicles and attachments in your empire's own VR Training simulator.",
     keyword: 'vr',
     warpgateRegions: [],
   },
   [ZoneType.VR_NC]: {
     name: 'VR Training Room (NC)',
     description:
-      'Experiment with all weapons, vehicles and attachments in your empire\'s own VR Training simulator.',
+      "Experiment with all weapons, vehicles and attachments in your empire's own VR Training simulator.",
     keyword: 'vr',
     warpgateRegions: [],
   },
   [ZoneType.VR_TR]: {
     name: 'VR Training Room (TR)',
     description:
-      'Experiment with all weapons, vehicles and attachments in your empire\'s own VR Training simulator.',
+      "Experiment with all weapons, vehicles and attachments in your empire's own VR Training simulator.",
     keyword: 'vr',
     warpgateRegions: [],
   },
   [ZoneType.VR_VS]: {
     name: 'VR Training Room (VS)',
     description:
-      'Experiment with all weapons, vehicles and attachments in your empire\'s own VR Training simulator.',
+      "Experiment with all weapons, vehicles and attachments in your empire's own VR Training simulator.",
     keyword: 'vr',
     warpgateRegions: [],
   },
@@ -105,19 +100,22 @@ export const zones = {
   },
   [ZoneType.DESOLATION]: {
     name: 'Desolation',
-    description: 'Far from Auraxis, an asteroid belt hides ancient Vanu artifacts, providing more questions than answers.',
+    description:
+      'Far from Auraxis, an asteroid belt hides ancient Vanu artifacts, providing more questions than answers.',
     keyword: 'battle',
     warpgateRegions: [],
   },
   [ZoneType.DESOLATION_2]: {
     name: 'Desolation',
-    description: 'Far from Auraxis, an asteroid belt hides ancient Vanu artifacts, providing more questions than answers.',
+    description:
+      'Far from Auraxis, an asteroid belt hides ancient Vanu artifacts, providing more questions than answers.',
     keyword: 'battle',
     warpgateRegions: [],
   },
   [ZoneType.NEXUS]: {
     name: 'Nexus',
-    description: 'The frigid battle island of Nexus is marked by icy corridors and steep elevation changes.',
+    description:
+      'The frigid battle island of Nexus is marked by icy corridors and steep elevation changes.',
     keyword: 'battle',
     warpgateRegions: [],
   },

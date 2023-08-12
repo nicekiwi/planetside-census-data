@@ -29,9 +29,7 @@ export const factions = {
   },
 }
 
-export function factionShortToId(
-  short: FactionShortType
-): FactionType | undefined {
+export function factionShortToId(short: FactionShortType): FactionType | undefined {
   return (Object.keys(factions).map(Number) as FactionType[]).find(
     (id) => factions[id].short === short
   )

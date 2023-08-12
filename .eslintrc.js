@@ -12,9 +12,9 @@ module.exports = {
   plugins: ['@typescript-eslint'],
   rules: {
     'no-console': 'off',
-    'quotes': ['error', 'single'],
+    'quotes': ['error', 'single', { 'avoidEscape': true }],
     'semi': ['error', 'never'],
-    '@typescript-eslint/quotes': ['error', 'single'],
+    '@typescript-eslint/quotes': ['error', 'single', { 'avoidEscape': true }],
     '@typescript-eslint/semi': ['error', 'never']
   },
 }

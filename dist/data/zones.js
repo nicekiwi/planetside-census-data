@@ -27,11 +27,7 @@ exports.liveZoneIds = [
     ZoneType_1.ZoneType.ESAMIR,
     ZoneType_1.ZoneType.OSHUR,
 ];
-exports.outfitWarZoneIds = [
-    ZoneType_1.ZoneType.NEXUS,
-    ZoneType_1.ZoneType.DESOLATION,
-    ZoneType_1.ZoneType.DESOLATION_2,
-];
+exports.outfitWarZoneIds = [ZoneType_1.ZoneType.NEXUS, ZoneType_1.ZoneType.DESOLATION, ZoneType_1.ZoneType.DESOLATION_2];
 exports.zones = {
     [ZoneType_1.ZoneType.INDAR]: {
         name: 'Indar',

@@ -9,10 +9,7 @@ export const streamUrl = 'push.planetside2.com/streaming'
 
 export const streamUrlWss = 'wss://push.planetside2.com/streaming'
 
-export function streamUrlComplete(
-  namespace: NamespaceType,
-  serviceId: string
-): string {
+export function streamUrlComplete(namespace: NamespaceType, serviceId: string): string {
   return `${streamUrlWss}?environment=${namespace}&service-id=s:${serviceId}`
 }
 

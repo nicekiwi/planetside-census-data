@@ -1,8 +1,4 @@
-import axios, {
-  type AxiosError,
-  type AxiosRequestConfig,
-  type AxiosResponse,
-} from 'axios'
+import axios, { type AxiosError, type AxiosRequestConfig, type AxiosResponse } from 'axios'
 import get from 'lodash.get'
 import has from 'lodash.has'
 
@@ -12,18 +8,14 @@ export const requestUrl = 'census.daybreakgames.com'
 
 export const requestUrlHttps = 'https://census.daybreakgames.com'
 
-export function requestUrlComplete(
-  namespace: NamespaceType,
-  serviceId: string
-): string {
+export function requestUrlComplete(namespace: NamespaceType, serviceId: string): string {
   return `${requestUrlHttps}/s:${serviceId}/get/${namespace}:${NamespaceVersionType.V2}/`
 }
 
-export interface ICensusRequestConfig
-  extends Omit<AxiosRequestConfig, 'method' | 'url'> {
-  uri: string;
-  collection?: string;
-} 
+export interface ICensusRequestConfig extends Omit<AxiosRequestConfig, 'method' | 'url'> {
+  uri: string
+  collection?: string
+}
 
 export type ICensusRequestError<T = unknown> = AxiosError<T>
 
@@ -35,11 +27,7 @@ export class CensusRequest {
     this.url = requestUrlComplete(namespace, serviceId)
   }
 
-  async get<T>({
-    uri,
-    collection,
-    ...config
-  }: ICensusRequestConfig): Promise<T> {
+  async get<T>({ uri, collection, ...config }: ICensusRequestConfig): Promise<T> {
     this.response = await axios.get<T>(`${this.url}/${uri}`, config)
 
     if (collection === undefined) {
