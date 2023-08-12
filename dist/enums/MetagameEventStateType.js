@@ -8,4 +8,4 @@ var MetagameEventStateType;
     MetagameEventStateType[MetagameEventStateType["CANCELED"] = 137] = "CANCELED";
     MetagameEventStateType[MetagameEventStateType["ENDED"] = 138] = "ENDED";
     MetagameEventStateType[MetagameEventStateType["XP_BONUS_CHANGED"] = 139] = "XP_BONUS_CHANGED";
-})(MetagameEventStateType = exports.MetagameEventStateType || (exports.MetagameEventStateType = {}));
+})(MetagameEventStateType || (exports.MetagameEventStateType = MetagameEventStateType = {}));

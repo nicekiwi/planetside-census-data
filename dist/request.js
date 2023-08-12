@@ -22,7 +22,6 @@ class CensusRequest {
     }
     async get({ uri, collection, ...config }) {
         this.response = await axios_1.default.get(`${this.url}/${uri}`, config);
-        console.log(this.response.data);
         if (collection === undefined) {
             return this.response.data;
         }

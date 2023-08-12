@@ -6,4 +6,3 @@ export declare enum NamespaceType {
 export declare enum NamespaceVersionType {
     V2 = "v2"
 }
-export declare const namespaces: NamespaceType[];

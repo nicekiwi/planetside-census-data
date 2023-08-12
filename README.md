@@ -14,26 +14,37 @@ npm i planetside-census-data
 
 ### Examples
 
-#### CensusRequest with validation
+#### CensusRequest with list validation
 
 ```ts
-import { censusRequest, NamespaceType } from 'planetside-census-data';
+import CensusRequest from 'planetside-census-data/request';
+import { NamespaceType } from 'planetside-census-data/enums/NamespaceType';
 
 interface ICharacterFaction {
   character_id: string;
   faction_id: number;
 }
 
-const characters = await censusRequest<ICharacterFaction[]>({
-  serviceId: 's:example',
-  platform: NamespaceType.PC,
-  uri: 'character',
-  params: {
-    'character_id': '54200000000000000,54200000000000001',
-    'c:show': 'character_id,faction_id',
-  },
-  collection: 'character_list',
-});
+const api = new CensusRequest(NamespaceType.PC, 's:example')
+
+const getCharacters = async (
+  ids: stirng[],
+  collection: string = undefined
+) => {
+  return await api.get<ICharacterFaction[]>({
+    uri: 'character',
+    params: {
+      'character_id': ids.join(','),
+      'c:show': ['character_id','faction_id']
+    },
+    collection
+  });
+}
+
+const characters = await getCharacters([
+  '54200000000000000',
+  '54200000000000001'
+], 'character_list');
 
 console.log(characters);
 
@@ -52,22 +63,34 @@ console.log(characters);
 #### CensusRequest without list validation
 
 ```ts
-import { censusRequest, NamespaceType } from 'planetside-census-data';
+import CensusRequest from 'planetside-census-data/request';
+import { NamespaceType } from 'planetside-census-data/enums/NamespaceType';
 
 interface ICharacterFaction {
   character_id: string;
   faction_id: number;
 }
 
-const characters = await censusRequest<{ character_list: ICharacterFaction[], returned: number }>({
-  serviceId: 's:example',
-  platform: NamespaceType.PC,
-  uri: 'character',
-  params: {
-    'character_id': '54200000000000000,54200000000000001',
-    'c:show': 'character_id,faction_id',
-  }
-});
+const api = new CensusRequest(NamespaceType.PC, 's:example')
+
+const getCharacters = async (
+  ids: stirng[],
+  collection: string = undefined
+) => {
+  return await api.get<ICharacterFaction[]>({
+    uri: 'character',
+    params: {
+      'character_id': ids.join(','),
+      'c:show': ['character_id','faction_id']
+    },
+    collection
+  });
+}
+
+const characters = await getCharacters([
+  '54200000000000000',
+  '54200000000000001'
+]);
 
 console.log(characters);
 
@@ -89,7 +112,9 @@ console.log(characters);
 #### CensusStream
 
 ```ts
-import { CensusStream, NamespaceType, StreamEventType } from 'planetside-census-data';
+import CensusStream from 'planetside-census-data';
+import { NamespaceType } from 'planetside-census-data/enums/NamespaceType';
+import { StreamEventType } from 'planetside-census-data/enums/StreamEventType';
 
 const stream = new CensusStream(
   platform: NamespaceType.PC,
@@ -141,6 +166,15 @@ stream.on(StreamEventType.CHARACTER_DEATH, (data: ServiceMessageResponse<DeathPa
 - `CensusStream` base class blatantly stolen from [planetside-stream-api](https://github.com/Planetside-Community-Devs/planetside-stream-api)
 
 ### Changelog
+
+#### 2.1.0 - 11/08/2023
+- Updated README with correct usage of `CensusRequest`.
+- **Breaking** Remove `index.ts`. Import directly form `data`, `enums`, `interfaces`, `request` or `stream` instead.
+- **Breaking** Remove `data/events.ts`, it changes too often to keep static.
+- Move `stream` interfaces into own file.
+- Move `namespaces` into own file.
+- Add `getZoneNameById` function.
+- Update dependencies.
 
 #### 2.0.0 - 10/04/2023
 

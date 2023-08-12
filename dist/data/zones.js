@@ -1,7 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.zones = exports.outfitWarZoneIds = exports.liveZoneIds = exports.zoneIds = void 0;
+exports.zones = exports.outfitWarZoneIds = exports.liveZoneIds = exports.zoneIds = exports.getZoneNameById = void 0;
 const ZoneType_1 = require("../enums/ZoneType");
+const getZoneNameById = (id) => exports.zones[id].name.toLowerCase();
+exports.getZoneNameById = getZoneNameById;
 exports.zoneIds = [
     ZoneType_1.ZoneType.INDAR,
     ZoneType_1.ZoneType.HOSSIN,

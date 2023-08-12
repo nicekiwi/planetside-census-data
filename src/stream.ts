@@ -2,11 +2,8 @@ import { EventEmitter } from 'events'
 import Websocket from 'ws'
 
 import { NamespaceType } from './enums/NamespaceType'
-import {
-  IHeartbeatResponse,
-  IServiceMessageResponse,
-  MessageType,
-} from './enums/StreamEventType'
+import { MessageType } from './enums/StreamEventType'
+import { IHeartbeatResponse, IServiceMessageResponse } from './interfaces/stream'
 
 export const streamUrl = 'push.planetside2.com/streaming'
 

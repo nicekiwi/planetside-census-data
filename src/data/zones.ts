@@ -1,5 +1,7 @@
 import { ZoneType } from '../enums/ZoneType'
 
+export const getZoneNameById = (id: ZoneType) => zones[id].name.toLowerCase()
+
 export const zoneIds = [
   ZoneType.INDAR,
   ZoneType.HOSSIN,

@@ -18,4 +18,4 @@ var ZoneType;
     ZoneType[ZoneType["DESOLATION_2"] = 338] = "DESOLATION_2";
     ZoneType[ZoneType["OSHUR"] = 344] = "OSHUR";
     ZoneType[ZoneType["KOLTYR"] = 10000] = "KOLTYR";
-})(ZoneType = exports.ZoneType || (exports.ZoneType = {}));
+})(ZoneType || (exports.ZoneType = ZoneType = {}));

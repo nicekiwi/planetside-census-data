@@ -1,4 +1,5 @@
 import { ZoneType } from '../enums/ZoneType';
+export declare const getZoneNameById: (id: ZoneType) => string;
 export declare const zoneIds: ZoneType[];
 export declare const liveZoneIds: ZoneType[];
 export declare const outfitWarZoneIds: ZoneType[];

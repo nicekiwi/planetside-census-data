@@ -15,19 +15,18 @@ var StreamEventType;
     StreamEventType["CHARACTER_SKILL_ADDED"] = "SkillAdded";
     StreamEventType["CHARACTER_VEHICLE_DESTROY"] = "VehicleDestroy";
     StreamEventType["ZONE_LOCK"] = "ContinentLock";
-    StreamEventType["ZONE_UNLOCK"] = "ContinentUnlock";
     StreamEventType["ZONE_METAGAME_EVENT"] = "MetagameEvent";
     StreamEventType["ZONE_FACILITY_CONTROL"] = "FacilityControl";
-})(StreamEventType = exports.StreamEventType || (exports.StreamEventType = {}));
+})(StreamEventType || (exports.StreamEventType = StreamEventType = {}));
 var MessageType;
 (function (MessageType) {
     MessageType["HEARTBEAT"] = "heartbeat";
     MessageType["SERVICE_MESSAGE"] = "serviceMessage";
     MessageType["SERVICE_STATE_CHANGE"] = "serviceStateChange";
     MessageType["CONNECTION_STATE_CHANGED"] = "connectionStateChanged";
-})(MessageType = exports.MessageType || (exports.MessageType = {}));
+})(MessageType || (exports.MessageType = MessageType = {}));
 var ServiceType;
 (function (ServiceType) {
     ServiceType["EVENT"] = "event";
     ServiceType["PUSH"] = "push";
-})(ServiceType = exports.ServiceType || (exports.ServiceType = {}));
+})(ServiceType || (exports.ServiceType = ServiceType = {}));

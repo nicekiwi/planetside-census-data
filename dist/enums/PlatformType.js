@@ -5,4 +5,4 @@ var PlatformType;
 (function (PlatformType) {
     PlatformType["PC"] = "pc";
     PlatformType["PS4"] = "ps4";
-})(PlatformType = exports.PlatformType || (exports.PlatformType = {}));
+})(PlatformType || (exports.PlatformType = PlatformType = {}));

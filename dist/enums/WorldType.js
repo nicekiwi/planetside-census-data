@@ -13,10 +13,10 @@ var WorldType;
     WorldType[WorldType["SOLTECH"] = 40] = "SOLTECH";
     WorldType[WorldType["GENUDINE"] = 1000] = "GENUDINE";
     WorldType[WorldType["CERES"] = 2000] = "CERES";
-})(WorldType = exports.WorldType || (exports.WorldType = {}));
+})(WorldType || (exports.WorldType = WorldType = {}));
 var WorldStateType;
 (function (WorldStateType) {
     WorldStateType["ONLINE"] = "online";
     WorldStateType["OFFLINE"] = "offline";
     WorldStateType["LOCKED"] = "locked";
-})(WorldStateType = exports.WorldStateType || (exports.WorldStateType = {}));
+})(WorldStateType || (exports.WorldStateType = WorldStateType = {}));

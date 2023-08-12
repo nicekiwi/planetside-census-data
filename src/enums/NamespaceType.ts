@@ -7,9 +7,3 @@ export enum NamespaceType {
 export enum NamespaceVersionType {
   V2 = 'v2',
 }
-
-export const namespaces = [
-  NamespaceType.PC,
-  NamespaceType.PS4_US,
-  NamespaceType.PS4_EU,
-]
