@@ -1,6 +1,6 @@
 {
   "name": "planetside-census-data",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "Common data for planetside apps.",
   "repository": {
     "type": "git",
@@ -16,6 +16,7 @@
     "url": "https://github.com/nicekiwi/planetside-census-data/issues"
   },
   "homepage": "https://github.com/nicekiwi/planetside-census-data#readme",
+  "main": "dist/index.js",
   "types": "src/index.d.ts",
   "scripts": {
     "build": "rimraf ./dist && tsc",
@@ -47,12 +48,6 @@
     "prettier": "^3.0.1",
     "rimraf": "^5.0.1",
     "typescript": "^5.1.6"
-  },
-  "dependencies": {
-    "axios": "^1.4.0",
-    "lodash.get": "^4.4.2",
-    "lodash.has": "^4.5.2",
-    "ws": "^8.13.0"
   },
   "engines": {
     "node": "18.16.0",
